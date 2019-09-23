@@ -1,0 +1,14 @@
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+.card {
+    margin: 5px auto;
+
+} 
+
+.total-price {
+    text-align: end;
+    margin-bottom: 10px;
+}

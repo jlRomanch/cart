@@ -1,0 +1,17 @@
+<ng-container *ngIf="items.length; else elseTemplate">
+        <div class="card-text total-price"><span>Total price:</span> {{ fullPrice | currency }} </div>
+    <div class="card-wrapper">
+        <div *ngFor="let item of items; let i = index" class="card" style="width: 18rem;">
+            <img src="../../../assets/img/product.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h4 class="card-title"> {{ item.name }} </h4>
+                <p class="card-text"> {{ item.label }} </p>
+                <p class="card-text"> {{ item.price | currency }} </p> 
+            </div>
+            <button (click)="remove(i)" class="btn btn-info">Remove item</button>
+        </div>
+    </div>
+</ng-container>
+<ng-template #elseTemplate>
+    <span class="text-center">Cart is empty</span>
+</ng-template>

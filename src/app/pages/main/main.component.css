@@ -1,0 +1,13 @@
+.card {
+    margin: 5px auto;
+} 
+
+.card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+.btn {
+    background-color: black;
+    border: none;
+}

@@ -1,0 +1,24 @@
+<!-- <div class="row">
+    <div *ngFor="let item of items" class="card col-12 col-sm-6 col-md-4 col-lg-3" style="width: 18rem;">
+
+        <div class="card-header"> {{ item.id }} </div>
+        <div class="card-body">
+            <h4 class="card-title"> {{ item.name }} </h4>
+            <p class="card-text"> {{ item.label }} <span class="ml-5"> {{ item.price | currency }} </span> </p>
+        </div>
+        <button (click)="addToCart(item)" class="btn btn-success btn-sm">Add to cart</button>
+
+    </div>
+</div> -->
+<div class="card-wrapper">
+    <div *ngFor="let item of items" class="card" style="width: 18rem;">
+        <img src="../../../assets/img/product.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h4 class="card-title"> {{ item.name }} </h4>
+            <p class="card-text">{{ item.label }}</p>
+            <p class="card-text">{{ item.price | currency }}</p>
+            <button (click)="addToCart(item)" class="btn btn-info" data-toggle="modal"
+                data-target="#exampleModalScrollable">Add to cart</button>
+        </div>
+    </div>
+</div>
